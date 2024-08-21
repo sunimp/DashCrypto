@@ -15,7 +15,7 @@ the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/horizontalsystems/DashCrypto.Swift.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/sunimp/DashCrypto.Swift.git", .upToNextMajor(from: "1.0.0"))
 ]
 ```
 
