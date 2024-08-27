@@ -5,10 +5,13 @@ import PackageDescription
 
 let package = Package(
   name: "DashCrypto",
-  platforms: [.iOS(.v13)],
+  platforms: [.iOS(.v14)],
   products: [
     .library(name: "DashCrypto",
              targets: ["BlsKit", "X11Kit"])
+  ],
+  dependencies: [
+    .package(url: "https://github.com/nicklockwood/SwiftFormat.git", from: "0.54.0"),
   ],
   targets: [
     .target(
