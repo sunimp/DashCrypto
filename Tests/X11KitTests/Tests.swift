@@ -1,10 +1,15 @@
+//
+//  Tests.swift
+//
+//  Created by Sun on 2022/8/25.
+//
+
 import X11Kit
 import XCTest
 
 // MARK: - Tests
 
 class Tests: XCTestCase {
-
     func testJHValue() {
         let data = "DASH".data(using: .utf8)!
         let hash =
@@ -105,7 +110,8 @@ class Tests: XCTestCase {
     }
 
     func testGroestl512Value() {
-        let data = "Groestl is an Austrian dish, usually made of leftover potatoes and pork, cut into slice.".data(using: .utf8)!
+        let data = "Groestl is an Austrian dish, usually made of leftover potatoes and pork, cut into slice."
+            .data(using: .utf8)!
         let hash =
             Data(
                 hex: "eefdf4c9d6b6fd53390049388de8974525b406206114a8885016aa36619652535835a22ab0be05a81ea15f47ebaed9c236a79f354f699e45b6a7aebc9648695d"
@@ -139,11 +145,9 @@ class Tests: XCTestCase {
         let hash = Data(hex: "f29c0f286fd8071669286c6987eb941181134ff5f3978bf89f34070000000000")!
         XCTAssertEqual(X11Kit.x11(data), hash)
     }
-
 }
 
 extension Data {
-
     init?(hex: String) {
         let len = hex.count / 2
         var data = Data(capacity: len)
@@ -159,5 +163,4 @@ extension Data {
         }
         self = data
     }
-
 }

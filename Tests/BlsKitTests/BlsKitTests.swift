@@ -1,13 +1,20 @@
-import XCTest
+//
+//  BlsKitTests.swift
+//
+//  Created by Sun on 2022/8/25.
+//
+
 @testable import BlsKit
+import XCTest
 
 // MARK: - BlsKitTests
 
 final class BlsKitTests: XCTestCase {
-
     func testSuccess() throws {
         let publicKey =
-            Data(hex: "141d89e211c93bee9f4cb26e4bd1fa530798dc1cc27e545c0e096aec9d913ba2cae572b339aaab612a0bb2f60dd71ceb")
+            Data(
+                hex: "141d89e211c93bee9f4cb26e4bd1fa530798dc1cc27e545c0e096aec9d913ba2cae572b339aaab612a0bb2f60dd71ceb"
+            )
         let sign =
             Data(
                 hex: "0cace6526d0f27e7b969700877796fce5d0a441281d952197eee051385b22c7b9010981cecd19986fc185aa65ac8d82b0c8ba2e0f2cab703f4cd9c3079cc53b78d947bc6d8cc6b05f87fcffea778a05df53f0340d6d0c4f9de182016df8452fe"
@@ -20,7 +27,9 @@ final class BlsKitTests: XCTestCase {
 
     func testFailure() throws {
         let publicKey =
-            Data(hex: "141d89e211c93bee9f4cb26e4bd1fa530798dc1cc27e545c0e096aec9d913ba2cae572b339aaab612a0bb2f60dd71ceb")
+            Data(
+                hex: "141d89e211c93bee9f4cb26e4bd1fa530798dc1cc27e545c0e096aec9d913ba2cae572b339aaab612a0bb2f60dd71ceb"
+            )
         let sign =
             Data(
                 hex: "0cace6526d0f27e7b969700877796fce5d0a441281d952197eee051385b22c7b9010981cecd19986fc185aa65ac8d82b0c8ba2e0f2cab703f4cd9c3079cc53b78d947bc6d8cc6b05f87fcffea778a05df53f0340d6d0c4f9de182016df8452fe"
@@ -30,11 +39,9 @@ final class BlsKitTests: XCTestCase {
 
         XCTAssertEqual(BlsKit.verify(message, publicKey: publicKey, signature: sign), false)
     }
-
 }
 
 extension Data {
-
     init(hex: String) {
         let len = hex.count / 2
         var data = Data(capacity: len)
@@ -51,5 +58,4 @@ extension Data {
         }
         self = data
     }
-
 }

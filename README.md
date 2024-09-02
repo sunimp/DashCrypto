@@ -2,6 +2,10 @@
 
 ## Requirements
 
+* Xcode 15.4+
+* Swift 5.10+
+* iOS 14.0+
+
 ## Installation
 
 ### Swift Package Manager
@@ -15,7 +19,7 @@ the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/sunimp/DashCrypto.Swift.git", .upToNextMajor(from: "1.0.4"))
+    .package(url: "https://github.com/sunimp/DashCrypto.Swift.git", .upToNextMajor(from: "1.1.0"))
 ]
 ```
 
