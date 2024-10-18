@@ -11,7 +11,7 @@ let package = Package(
              targets: ["BlsKit", "X11Kit"])
   ],
   dependencies: [
-    .package(url: "https://github.com/nicklockwood/SwiftFormat.git", from: "0.54.3"),
+    .package(url: "https://github.com/nicklockwood/SwiftFormat.git", from: "0.54.6"),
   ],
   targets: [
     .target(

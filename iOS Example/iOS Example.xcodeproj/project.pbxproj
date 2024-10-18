@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3A39D09C2757536E0022CB8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39D09A2757536E0022CB8B /* ViewController.swift */; };
 		3A39D09D2757536E0022CB8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39D09B2757536E0022CB8B /* AppDelegate.swift */; };
 		6B7C7E6828EC04CA0053F11A /* DashCrypto in Frameworks */ = {isa = PBXBuildFile; productRef = 6B7C7E6728EC04CA0053F11A /* DashCrypto */; };
+		A47EAAF22CC2BBB7004B8B67 /* DashCrypto in Frameworks */ = {isa = PBXBuildFile; productRef = A47EAAF12CC2BBB7004B8B67 /* DashCrypto */; };
 		D94502FD261F98A500F6BF2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94502FC261F98A500F6BF2E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B7C7E6828EC04CA0053F11A /* DashCrypto in Frameworks */,
+				A47EAAF22CC2BBB7004B8B67 /* DashCrypto in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,7 @@
 			name = "iOS Example";
 			packageProductDependencies = (
 				6B7C7E6728EC04CA0053F11A /* DashCrypto */,
+				A47EAAF12CC2BBB7004B8B67 /* DashCrypto */,
 			);
 			productName = "iOS Example";
 			productReference = D94502F5261F98A400F6BF2E /* DashCrypto-Example.app */;
@@ -116,6 +119,9 @@
 				Base,
 			);
 			mainGroup = D94502EC261F98A400F6BF2E;
+			packageReferences = (
+				A47EAAF02CC2BBB7004B8B67 /* XCLocalSwiftPackageReference "../../DashCrypto" */,
+			);
 			productRefGroup = D94502F6261F98A400F6BF2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -335,8 +341,19 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		A47EAAF02CC2BBB7004B8B67 /* XCLocalSwiftPackageReference "../../DashCrypto" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../DashCrypto;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		6B7C7E6728EC04CA0053F11A /* DashCrypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DashCrypto;
+		};
+		A47EAAF12CC2BBB7004B8B67 /* DashCrypto */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DashCrypto;
 		};
